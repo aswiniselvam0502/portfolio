@@ -1,137 +1,6 @@
-
-   
-      bottom: 20px; left: 20px;
-      background: rgba(7,8,12,.85);
-      -webkit-backdrop-filter: blur(12px);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 12px 16px;
-      z-index: 2;
-    }
-    .profile-tag-name { font-family: var(--font-head); font-size: 1rem; color: var(--text); }
-    .profile-tag-role {
-      font-family: var(--font-mono);
-      font-size: .65rem;
-      color: var(--accent);
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-    .profile-fallback {
-      width: 100%; height: 100%;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 16px;
-      background: linear-gradient(135deg, #111422 0%, #0d1020 100%);
-    }
-
-    /* ── EDUCATION ───────────────────────────────────────────────── */
-    .education-section { background: var(--bg); }
-    .timeline {
-      position: relative;
-      max-width: 720px;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 8px; bottom: 0;
-      width: 1px;
-      background: linear-gradient(to bottom, var(--accent), transparent);
-      opacity: .3;
-    }
-    .timeline-item {
-      padding-left: 40px;
-      padding-bottom: 56px;
-      position: relative;
-    }
-    .timeline-item:last-child { padding-bottom: 0; }
-    .timeline-dot {
-      position: absolute;
-      left: -5px; top: 8px;
-      width: 11px; height: 11px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(232,201,126,.1);
-    }
-    .timeline-year {
-      font-family: var(--font-mono);
-      font-size: .7rem;
-      letter-spacing: .15em;
-      color: var(--accent);
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .timeline-degree {
-      font-family: var(--font-head);
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: var(--text);
-      line-height: 1.2;
-      margin-bottom: 6px;
-    }
-    .timeline-school { font-size: .9rem; color: var(--muted); }
-
-    /* ── SKILLS ──────────────────────────────────────────────────── */
-    .skills-section { background: var(--bg2); }
-    .skills-layout {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px; .nav-link::before {
-      content: attr(data-num);
-      font-size: .6rem;
-      color: var(--accent);
-      opacity: .5;
-      flex-shrink: 0;
-    }
-    .nav-link:hover, .nav-link.active {
-      color: var(--text);
-      background: rgba(232,201,126,.06);
-    }
-    .nav-link.active { color: var(--accent); }
-    .nav-link.active::after {
-      content: '';
-      position: absolute;
-      right: 12px; top: 50%;
-      transform: translateY(-50%);
-      width: 4px; height: 4px;
-      background: var(--accent);
-      border-radius: 50%;
-    }
-
-    .nav-social {
-      padding: 24px 32px 0;
-      border-top: 1px solid var(--border);
-      display: flex;
-      gap: 12px;
-    }
-    .nav-social a {
-      width: 38px; height: 38px;
-      display: flex; align-items: center; justify-content: center;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border);
-      color: var(--muted);
-      transition: all .25s;
-    }
-    .nav-social a:hover { color: var(--accent); border-color: var(--accent); }
-    .nav-social svg {
-      display: block;
-      width: 16px;
-      height: 16px;
-    } 
-
-    /* ── Mobile menu button ──────────────────────────────────────── */
-    .menu-btn {
-      display: none;
-      position: fixed;
-      top: 16px; right: 16px;
-      z-index: 400;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-    }
-    </style>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aswini S – Designer &  SoftwareDeveloper | Chennai</title>
@@ -323,6 +192,55 @@
       color: var(--muted);
       transition: all .25s;
       position: relative;
+    }
+    .nav-link::before {
+      content: attr(data-num);
+      font-size: .6rem;
+      color: var(--accent);
+      opacity: .5;
+      flex-shrink: 0;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--text);
+      background: rgba(232,201,126,.06);
+    }
+    .nav-link.active { color: var(--accent); }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      right: 12px; top: 50%;
+      transform: translateY(-50%);
+      width: 4px; height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .nav-social {
+      padding: 24px 32px 0;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+    }
+    .nav-social a {
+      width: 38px; height: 38px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      transition: all .25s;
+    }
+    .nav-social a:hover { color: var(--accent); border-color: var(--accent); }
+    .nav-social svg { width: 16px; height: 16px; }
+
+    /* ── Mobile menu button ──────────────────────────────────────── */
+    .menu-btn {
+      display: none;
+      position: fixed;
+      top: 16px; right: 16px;
+      z-index: 400;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
       padding: 10px 12px;
       cursor: pointer;
       flex-direction: column;
@@ -668,26 +586,85 @@
     }
     .profile-tag {
       position: absolute;
-    
+      bottom: 20px; left: 20px;
+      background: rgba(7,8,12,.85);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      z-index: 2;
     }
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; }
+    .profile-tag-name { font-family: var(--font-head); font-size: 1rem; color: var(--text); }
+    .profile-tag-role {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      color: var(--accent);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .profile-fallback {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 16px;
+      background: linear-gradient(135deg, #111422 0%, #0d1020 100%);
     }
 
-    /* ── Toast notification ──────────────────────────────────────── */
-    .toast {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      padding: 12px 20px;
-      background: var(--surface);
-      border: 1px solid rgba(232,201,126,.3);
-      border-radius: var(--radius-md);
+    /* ── EDUCATION ───────────────────────────────────────────────── */
+    .education-section { background: var(--bg); }
+    .timeline {
+      position: relative;
+      max-width: 720px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      opacity: .3;
+    }
+    .timeline-item {
+      padding-left: 40px;
+      padding-bottom: 56px;
+      position: relative;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-dot {
+      position: absolute;
+      left: -5px; top: 8px;
+      width: 11px; height: 11px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(232,201,126,.1);
+    }
+    .timeline-year {
       font-family: var(--font-mono);
-      font-size: .75rem;
+      font-size: .7rem;
+      letter-spacing: .15em;
       color: var(--accent);
-      letter-spacing: .08em;
-      z-index: 9000;}
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .timeline-degree {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .timeline-school { font-size: .9rem; color: var(--muted); }
+
+    /* ── SKILLS ──────────────────────────────────────────────────── */
+    .skills-section { background: var(--bg2); }
+    .skills-layout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
     .skill-block {
       background: var(--surface);
       padding: 32px;
@@ -1038,11 +1015,7 @@
       transition: all .25s;
     }
     .footer-social a:hover { color: var(--accent); border-color: var(--accent); }
-    .footer-social svg {
-      display: block;
-      width: 18px;
-      height: 18px;
-  }
+    .footer-social svg { width: 14px; height: 14px; }
 
     /* ── Scroll reveal ───────────────────────────────────────────── */
     @media (prefers-reduced-motion: no-preference) {
@@ -1056,6 +1029,29 @@
         transform: none;
       }
     }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* ── Toast notification ──────────────────────────────────────── */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      padding: 12px 20px;
+      background: var(--surface);
+      border: 1px solid rgba(232,201,126,.3);
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      color: var(--accent);
+      letter-spacing: .08em;
+      z-index: 9000;
+      transform: translateY(12px);
+      opacity: 0;
+      transition: all .35s var(--ease);
+      pointer-events: none;
+    }
     .toast.show { transform: translateY(0); opacity: 1; }
 
     /* ════════════════════════════════════════════════════════════════
@@ -1064,7 +1060,7 @@
     @media (max-width: 1100px) {
       .skills-layout { grid-template-columns: repeat(2, 1fr); }
       .about-grid { grid-template-columns: 1fr; }
-      .about-image-wrap { display: block; }
+      .about-image-wrap { display: none; }
       .about-text p { max-width: 100%; }
       .contact-layout { grid-template-columns: 1fr; gap: 48px; }
       .projects-grid { grid-template-columns: 1fr; }
@@ -1230,7 +1226,7 @@
         <div class="home-roles" aria-label="Roles">
           <span>Designer</span>
           <span class="role-sep" aria-hidden="true">—</span>
-          <span>Backend Developer</span>
+          <span>Visual Designer</span>
           <span class="role-sep" aria-hidden="true">—</span>
           <span>Software Developer</span>
         </div>
@@ -1283,7 +1279,7 @@
             </a>
           </div>
 
-          <div class="about-image-wrap">
+          <div class="about-image-wrap reveal">
             <div class="profile-frame">
               <img
                 src="Aswini.jpg"
@@ -1326,13 +1322,13 @@
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-year">2024</div>
             <div class="timeline-degree">Higher Secondary Education (12th)</div>
-            <div class="timeline-school">Indian Matriculation Higher Secondary School, Harur,Dharmapuri</div>
+            <div class="timeline-school">Indian Matriculation Higher Secondary School, Chennai</div>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-year">2022</div>
             <div class="timeline-degree">Secondary Education (10th)</div>
-            <div class="timeline-school">Jayam Vidhyalaya Matriculation Higher Secondary School, Harur,Dharmapuri</div>
+            <div class="timeline-school">Jayam Vidhyalaya Matriculation Higher Secondary School, Chennai</div>
           </div>
         </div>
       </div>
